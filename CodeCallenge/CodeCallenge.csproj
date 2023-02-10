@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="specflow.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Include="specflow.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EditorConfigFiles>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+    <PackageReference Include="Selenium.Support" Version="4.8.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="110.0.5481.7700" />
+    <PackageReference Include="Selenium.WebDriver.GeckoDriver" Version="0.32.2" />
+    <PackageReference Include="Selenium.WebDriver.MSEdgeDriver" Version="109.0.1518.61" />
+    <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
+    <PackageReference Include="SpecFlow.NUnit" Version="3.9.40" />
+    <PackageReference Include="nunit" Version="3.13.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.1.0" />
+    <PackageReference Include="FluentAssertions" Version="6.2.0" />
+    <PackageReference Include="WebDriver.GeckoDriver" Version="0.20.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Home\" />
+    <Folder Include="Features\Contact\" />
+    <Folder Include="Files\" />
+    <Folder Include="Support\" />
+  </ItemGroup>
+
+</Project>
